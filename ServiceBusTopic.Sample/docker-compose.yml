@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  servicebustopic.sample.order:
+    image: ${DOCKER_REGISTRY-}servicebustopicsample
+    build:
+      context: .
+      dockerfile: ServiceBusTopic.Sample.Order/Dockerfile
+
+  servicebustopic.sample.producer:
+    image: ${DOCKER_REGISTRY-}servicebustopicsample
+    build:
+      context: .
+      dockerfile: ServiceBusTopic.Sample.Producer/Dockerfile
+
+
+  servicebustopic.sample.product:
+    image: ${DOCKER_REGISTRY-}servicebustopicsample
+    build:
+      context: .
+      dockerfile: ServiceBusTopic.Sample.Product/Dockerfile
+

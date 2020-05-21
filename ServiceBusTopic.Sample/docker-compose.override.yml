@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  servicebustopic.sample.order:
+
+  servicebustopic.sample.producer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+
+  servicebustopic.sample.product:
+
